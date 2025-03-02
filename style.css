@@ -1,0 +1,147 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  max-width: 100%; /* Use full width of the screen */
+  background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+  background-color: green;
+  color: rgb(244, 200, 59);
+}
+
+header h1 {
+  padding: 10px;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Main Heading */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Images layout */
+#images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; 
+  margin-top: 20px; 
+  flex-wrap: wrap;
+} 
+
+#images .image {
+  font-size: 5rem;
+  cursor: pointer;
+  flex: 1 1 150px;
+   /* Flex item will grow and shrink as needed */
+  text-align: center;
+}
+
+#images .image:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+#images h3 {
+  font-size: 1rem; /* Set size for text under images */
+}
+
+/* Score section */
+.score {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allows score items to wrap on smaller screens */
+}
+
+.score h3 {
+  font-size: 1.2rem;
+}
+
+/* Play button */
+.playDiv {
+  padding-top: 5rem;
+}
+
+.playDiv #play {
+  background-color: green;
+  color: goldenrod;
+  padding: 5px;
+  margin: 0 35vw; /* Adjust margin for better mobile responsiveness */
+  border-radius: 5px;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  #images {
+    gap: 20px; /* Reduced gap for smaller screens */
+  }
+
+  #images .image {
+    font-size: 4rem; /* Reduced font size for images */
+    flex: 1 1 100px; /* Image will take up 100px on smaller screens */
+  }
+
+  .score {
+    gap: 1rem; /* Reduced gap for score */
+  }
+
+  .playDiv #play {
+    margin: 0 15vw; /* Adjusted margin for smaller screens */
+    font-size: 1.2rem; /* Adjusted font size */
+    padding: 8px; /* Slightly increased padding for better touch targets */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Reduced font size of header */
+  }
+
+  #images .image {
+    font-size: 3rem; /* Further reduced font size of images */
+    flex: 1 1 80px; /* Images will take up 80px on small screens */
+  }
+
+  #images h3 {
+    font-size: 0.8rem; /* Reduced size of text under images */
+  }
+
+  .score {
+    gap: 0.5rem; /* Reduced gap for small screens */
+    flex-direction: column; /* Stacked score vertically on small screens */
+  }
+
+  .playDiv #play {
+    margin: 0 20vw; /* Further adjusted margin for smaller screens */
+    font-size: 1rem; /* Adjusted font size for play button */
+    padding: 10px; /* Increased padding for easier clicking */
+  }
+
+  footer {
+    font-size: 1rem; /* Reduced font size of footer */
+  }
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 125px; /* Adjusted margin for footer */
+  background-color: rgba(71, 68, 68, 0.993);
+  padding: 9.5px;
+  font-size: x-large;
+  color: #f4f4f4d0;
+}
